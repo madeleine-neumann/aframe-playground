@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Curved Images</title>
+    <meta name="description" content="Playground">
+    <script src="../../../dist/aframe-master.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script> -->
+    
+  </head>
+  <body>
+    <a-scene>
+      <a-sphere radius="2" src="img/earth.png" position="0 0 -5">
+          <a-entity>
+            <a-sphere src="img/moon.jpg" position="10 0 -3" light="type: hemisphere; color: #fff; groundColor: #000; intensity: 2"> 
+            </a-sphere>
+            <a-animation attribute="rotation"
+            dur="8000"
+            fill="forwards"
+            to="0 360 0"
+            easing="linear"
+            repeat="indefinite">
+          </a-animation>
+        </a-entity>
+        <a-animation attribute="rotation"
+          dur="50000"
+          direction= "normal"
+          fill="none"
+          easing="linear"
+          from=" 0 0 0"
+          to="0 360 0"
+          repeat="indefinite">
+        </a-animation>
+      </a-sphere> 
+       
+      <a-sky src="img/sky.jpg" rotation="0 -130 0"></a-sky>
+    </a-scene>
+  </body>
+</html>
